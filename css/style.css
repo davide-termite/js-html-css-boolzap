@@ -12,6 +12,12 @@ body {
   font-size: 12px;
   font-weight: 300;
 }
+i {
+  cursor: pointer;
+}
+input:focus{
+  outline: none;
+}
 
 .container {
   height: 100vh;
@@ -80,6 +86,7 @@ body {
 .chat-wrap .chat {
   height: calc(100% - 160px);
   background-image: url("../img/mine.jpg");
+  overflow-y: scroll;
 }
 .chat-wrap .inputtext{
   background-color: #f3eeea;
@@ -116,6 +123,13 @@ body {
   .app-wrap {
     width: 100%;
   }
+}
+
+.active-chat {
+  background-color: #e9ebeb;
+}
+.hidden {
+  display: none;
 }
 /* End Main Layout Rules */
 
@@ -173,6 +187,7 @@ body {
   border-right: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
   padding: 10px 20px;
+  cursor: pointer;
 }
 .contacts .card-contact .text {
   margin-left: 30px;
@@ -186,7 +201,67 @@ body {
 /*** END SIDEBAR ITEMS ***/
 
 /*** CHAT ITEMS ***/
+
+/** Messages **/
+.message-container {
+  padding: 25px 35px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.message-container .box {
+  margin: 10px;
+}
+.message-container .box span{
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 65%;
+  min-width: 150px;
+  font-size: 13px;
+}
+.message-container .box span p{
+  margin-top: 10px;
+  margin-left: 10px;
+  align-self: flex-end;
+  font-size: 10px;
+}
+
+/* User Message */
+.message-container .user-message {
+  justify-content: flex-end;
+}
+.message-container .user-message span{
+  background-color: #d5f9ba;
+}
+/* End User Message */
+
+/* Pc Message */
+.message-container .pc-message {
+  justify-content: flex-start;
+}
+.message-container .pc-message span {
+  background-color: white;
+}
+/* End PC Message */
+
+/** End Messages **/
+
+/** Chat Text Bar **/
 .chat-wrap .navbar .text {
   flex-grow: 15;
 }
+.chat-wrap .inputtext {
+  align-items: center;
+  justify-content: space-between;
+}
+.chat-wrap .inputtext .search{
+  padding-left: 20px;
+  width: 85%;
+}
+.chat-wrap .inputtext i {
+  font-size: 25px;
+  padding: 15px;
+}
+/** End Chat Text Bar **/
+
 /*** END CHAT ITEMS ***/
