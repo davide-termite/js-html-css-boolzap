@@ -78,8 +78,6 @@ h2 {
 }
 .sidebar-wrap .contacts {
   height: calc(100% - 210px);
-  min-height: 200px;
-  flex-shrink: 1;
   overflow-y: scroll;
 }
 
@@ -141,8 +139,6 @@ h2 {
 /*** SIDEBAR ITEMS ***/
 
 /** Notification Bar **/
-.notif {
-}
 .notif .icon {
   margin: 15px;
   height: 50px;
@@ -209,42 +205,45 @@ h2 {
 /** Messages **/
 .message-container {
   padding: 25px 35px;
-  display: flex;
-  flex-direction: column;
   height: 100%;
 }
+
 .message-container .box {
-  margin: 10px;
-}
-.message-container .box span{
-  padding: 15px;
+  position: relative;
+  padding: 10px 15px 25px 15px;
   border-radius: 10px;
-  max-width: 65%;
-  min-width: 50px;
+  max-width: 60%;
+  min-width: 100px;
   font-size: 13px;
+  margin-bottom: 10px;
+  word-break: break-word;
+  clear: both;
 }
-.message-container .box span p{
-  margin-top: 10px;
-  margin-left: 10px;
-  align-self: flex-end;
-  font-size: 10px;
+
+.message-container .box .hour{
+  margin: 5px 0;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.message-container .box .arrow{
+  position: absolute;
+  top: 2%;
+  right: 5%;
 }
 
 /* User Message */
 .message-container .user-message {
-  justify-content: flex-end;
-}
-.message-container .user-message span{
   background-color: #d5f9ba;
+  float: right;
 }
 /* End User Message */
 
 /* Pc Message */
 .message-container .pc-message {
-  justify-content: flex-start;
-}
-.message-container .pc-message span {
   background-color: #fff;
+  float: left;
 }
 /* End PC Message */
 
