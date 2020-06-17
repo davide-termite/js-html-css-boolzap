@@ -6,11 +6,14 @@ $(document).ready(
   var send = $("#send");
   var chat = $(".message-container");
 
-  // Prensdo orario
+
+  // Riprendo orario
   var today = new Date();
   var hours = today.getHours();
   var minutes = today.getMinutes();
   var time = addZero(hours) + ":" + addZero(minutes);
+
+  /////// MILESTONE 1 ///////
 
   // Cambio Icona quando focus su area messaggio
   textInput.focus(function() {
@@ -23,6 +26,7 @@ $(document).ready(
   //   microphone.toggleClass("hidden");
   //   send.toggleClass("hidden");
   // });
+
 
   // Inviare messaggio al click
   send.click(function() {
@@ -37,9 +41,6 @@ $(document).ready(
       textInput.val("");
     }
   });
-
-  // $(".message-container").scrollTop($(".message-container").height());
-
 
   // Funzione per inviare messaggio se Input non è vuoto
   function sendMessage(){
@@ -80,4 +81,24 @@ $(document).ready(
     }
     return number;
   }
+
+
+  /////// MILESTONE 2 ///////
+
+  // Funzione per creare array con nomi contatti
+
+  var searchQuery = $(".searchbar .search input");
+  var contactName = $(".card-contact .text .name")
+  searchQuery.keyup(function() {
+    contactName.each(function() {
+      if ($(this).text().includes(searchQuery.val())) {
+        $(this).parents(".card-contact").show();
+      }
+      else {
+        $(this).parents(".card-contact").hide();
+      }
+    });
+  });
+
+
 })
