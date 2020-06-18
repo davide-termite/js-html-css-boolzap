@@ -109,9 +109,21 @@ $(document).ready(
   var contactCard = $('.card-contact');
 
   // Apro menù a tendina su messaggio
+  // $(document).on('click','.arrow', function(){
+  //   $(".dropdown").each(function(){
+  //     var visible = $(".dropdown").is(":visible");
+  //
+  //     if (!visible) {
+  //       $(this).siblings(".dropdown").removeClass("hidden");
+  //     } else {
+  //       $(this).siblings(".dropdown").addClass("hidden");
+  //     }
+  //   })
+  // })
+
   $(document).on('click','.arrow', function(){
     $(this).siblings(".dropdown").toggleClass("hidden");
-  })
+  });
 
   // Cancello messaggio
   $(document).on('click','.delete', function() {
@@ -120,19 +132,31 @@ $(document).ready(
 
   // Seleziono contatto  e relativa chat
   contactCard.on('click', function (){
+
+    // Aggiungo classe active nella chat che si utlizza
     $(this).siblings().removeClass('active-chat');
     $(this).addClass('active-chat');
 
-    var attrContact = $(this).attr('data-contact');
+    // Riprendo nome contatto e avatar
+    var avatar = $(this).find('.avatar').html();
+    var avatarName = $(this).find('.text .name').html();
 
+    // Riprendo attributo del contatto e chat
+    var attrContact = $(this).attr('data-contact');
     var attrChat = '.chat .message-container[data-chat="' + attrContact + '"]'
 
+    // Nascondo chat non in utilizzo
     $(attrChat).siblings(".message-container").addClass("hidden");
     $(attrChat).siblings(".message-container").removeClass("visible");
 
+    // Rendo visibile chat in utilizzo
     $(attrChat).removeClass("hidden");
     $(attrChat).addClass("visible");
-  })
 
+    // Aggiungo nome e avatar a chat attiva
+    $('.chat-wrap .navbar .avatar').html(avatar);
+    $('.chat-wrap .text .name').html(avatarName);
+
+  })
 
 }) // End Doc Ready
