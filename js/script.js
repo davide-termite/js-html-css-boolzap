@@ -16,15 +16,19 @@ $(document).ready(
   /////// MILESTONE 1 ///////
 
   // Cambio Icona quando focus su area messaggio
-  textInput.focus(function() {
-    microphone.toggleClass("hidden");
-    send.toggleClass("hidden");
-  });
+  // if (textInput.val() != "") {
+    textInput.focus(function() {
+      microphone.toggleClass("hidden");
+      send.toggleClass("hidden");
+    });
+  // };
 
   // Cambio Icona quando focus non più su area messaggio
   // textInput.focusout(function() {
-  //   microphone.toggleClass("hidden");
-  //   send.toggleClass("hidden");
+  //   if (textInput.val() != "") {
+  //     microphone.toggleClass("hidden");
+  //     send.toggleClass("hidden");
+  //   }
   // });
 
 
@@ -54,7 +58,7 @@ $(document).ready(
 
       newMessage.removeClass("hidden template-user");
 
-      chat.append(newMessage);
+      $(".visible").append(newMessage);
 
       setTimeout(sendReply, 1000);
     }
@@ -71,7 +75,7 @@ $(document).ready(
 
     newMessage.removeClass("hidden template-reply");
 
-    chat.append(newMessage);
+    $(".visible").append(newMessage);
   }
 
   // Funzione che aggiunge 0 a minuti e ore <10
@@ -82,13 +86,13 @@ $(document).ready(
     return number;
   }
 
-
   /////// MILESTONE 2 ///////
 
-  // Funzione per creare array con nomi contatti
+  // Funzione per cercare nomi nella sezione contatti
 
   var searchQuery = $(".searchbar .search input");
-  var contactName = $(".card-contact .text .name")
+  var contactName = $(".card-contact .text .name");
+
   searchQuery.keyup(function() {
     contactName.each(function() {
       if ($(this).text().includes(searchQuery.val())) {
@@ -101,4 +105,34 @@ $(document).ready(
   });
 
 
-})
+  /////// MILESTONE 3 ///////
+  var contactCard = $('.card-contact');
+
+  // Apro menù a tendina su messaggio
+  $(document).on('click','.arrow', function(){
+    $(this).siblings(".dropdown").toggleClass("hidden");
+  })
+
+  // Cancello messaggio
+  $(document).on('click','.delete', function() {
+    $(this).parents(".box").remove();
+  })
+
+  // Seleziono contatto  e relativa chat
+  contactCard.on('click', function (){
+    $(this).siblings().removeClass('active-chat');
+    $(this).addClass('active-chat');
+
+    var attrContact = $(this).attr('data-contact');
+
+    var attrChat = '.chat .message-container[data-chat="' + attrContact + '"]'
+
+    $(attrChat).siblings(".message-container").addClass("hidden");
+    $(attrChat).siblings(".message-container").removeClass("visible");
+
+    $(attrChat).removeClass("hidden");
+    $(attrChat).addClass("visible");
+  })
+
+
+}) // End Doc Ready

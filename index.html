@@ -61,7 +61,7 @@
           <div class="contacts">
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row active-chat">
+            <div data-contact="0" class="card-contact flex-row active-chat">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -90,7 +90,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="1" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -123,7 +123,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="2" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -156,7 +156,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="3" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -189,7 +189,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="4" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -222,7 +222,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="5" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -255,7 +255,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="6" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -288,7 +288,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="7" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -321,7 +321,7 @@
             <!-- End Single Contact Card -->
 
             <!-- Single Contact Card -->
-            <div class="card-contact flex-row">
+            <div data-contact="8" class="card-contact flex-row">
 
               <!-- Contact Avatar -->
               <div class="avatar">
@@ -393,33 +393,251 @@
 
           <!-- Chat -->
           <div class="chat">
-            <div class="message-container">
+            <div data-chat="0" class="message-container visible">
 
-              <!-- Template User Message -->
-              <div class="template-user box user-message flex-row hidden">
-                <span class="text-message"></span>
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
                 <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
-                <span class="sub hour"></span>
+                <span class="sub hour">16.23</span>
                 <!-- Dropdown -->
-                <div class="dropdown flex-col">
+                <div class="dropdown flex-col hidden">
                   <span class="info">Info Messaggio</span>
                   <span class="delete">Cancella Messaggio</span>
                 </div>
               </div>
-              <!-- End Template User Message -->
-
-              <!-- Template Reply Message -->
-              <div class="template-reply box pc-message flex-row hidden">
-                <span class="text-message"></span>
+              <!-- End User Message -->
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
                 <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
-                <span class="sub hour"></span>
+                <span class="sub hour">16.23</span>
                 <!-- Dropdown -->
-                <div class="dropdown flex-col">
+                <div class="dropdown flex-col hidden">
                   <span class="info">Info Messaggio</span>
                   <span class="delete">Cancella Messaggio</span>
                 </div>
               </div>
-              <!-- End Template Reply Message -->
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="1" class="message-container hidden">
+
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="2" class="message-container hidden">
+
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="3" class="message-container hidden">
+
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="4" class="message-container hidden">
+
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="5" class="message-container hidden">
+
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="6" class="message-container hidden">
+
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="7" class="message-container hidden">
+
+              <!-- User Message -->
+              <div class="box user-message flex-row">
+                <span class="text-message">ciao</span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End User Message -->
+
+              <!-- Reply Message -->
+              <div class="box pc-message flex-row">
+                <span class="text-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt </span>
+                <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+                <span class="sub hour">16.23</span>
+                <!-- Dropdown -->
+                <div class="dropdown flex-col hidden">
+                  <span class="info">Info Messaggio</span>
+                  <span class="delete">Cancella Messaggio</span>
+                </div>
+              </div>
+              <!-- End Reply Message -->
+
+            </div>
+            <div data-chat="8" class="message-container hidden">
 
               <!-- User Message -->
               <div class="box user-message flex-row">
@@ -449,6 +667,36 @@
 
             </div>
           </div>
+
+          <!-- HIDDEN - MESSAGE TEMPLATES -->
+          <div class="templates">
+            <!-- Template User Message -->
+            <div class="template-user box user-message flex-row hidden">
+              <span class="text-message"></span>
+              <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+              <span class="sub hour"></span>
+              <!-- Dropdown -->
+              <div class="dropdown flex-col hidden">
+                <span class="info">Info Messaggio</span>
+                <span class="delete">Cancella Messaggio</span>
+              </div>
+            </div>
+            <!-- End Template User Message -->
+
+            <!-- Template Reply Message -->
+            <div class="template-reply box pc-message flex-row hidden">
+              <span class="text-message"></span>
+              <span class="sub arrow"><i class="fas fa-sort-down"></i></span>
+              <span class="sub hour"></span>
+              <!-- Dropdown -->
+              <div class="dropdown flex-col hidden">
+                <span class="info">Info Messaggio</span>
+                <span class="delete">Cancella Messaggio</span>
+              </div>
+            </div>
+            <!-- End Template Reply Message -->
+          </div>
+          <!-- END MESSAGE TEMPLATES -->
 
           <!-- Textbar -->
           <div class="inputtext bar flex-row">
