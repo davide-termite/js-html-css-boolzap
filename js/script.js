@@ -16,20 +16,16 @@ $(document).ready(
   /////// MILESTONE 1 ///////
 
   // Cambio Icona quando focus su area messaggio
-  // if (textInput.val() != "") {
-    textInput.focus(function() {
-      microphone.toggleClass("hidden");
-      send.toggleClass("hidden");
-    });
-  // };
+  textInput.focus(function() {
+    microphone.toggleClass("hidden");
+    send.toggleClass("hidden");
+  });
 
   // Cambio Icona quando focus non più su area messaggio
-  // textInput.focusout(function() {
-  //   if (textInput.val() != "") {
-  //     microphone.toggleClass("hidden");
-  //     send.toggleClass("hidden");
-  //   }
-  // });
+  textInput.blur(function() {
+    microphone.toggleClass("hidden");
+    send.toggleClass("hidden");
+  });
 
 
   // Inviare messaggio al click
@@ -108,24 +104,14 @@ $(document).ready(
   /////// MILESTONE 3 ///////
   var contactCard = $('.card-contact');
 
-  // Apro menù a tendina su messaggio
-  // $(document).on('click','.arrow', function(){
-  //   $(".dropdown").each(function(){
-  //     var visible = $(".dropdown").is(":visible");
-  //
-  //     if (!visible) {
-  //       $(this).siblings(".dropdown").removeClass("hidden");
-  //     } else {
-  //       $(this).siblings(".dropdown").addClass("hidden");
-  //     }
-  //   })
-  // })
-
+  // Dropdown menù al click sulla freccia
   $(document).on('click','.arrow', function(){
+    $(this).parent().siblings().find(".dropdown").addClass("hidden");
+
     $(this).siblings(".dropdown").toggleClass("hidden");
   });
 
-  // Cancello messaggio
+  // Cancello messaggio dal dropdown menù
   $(document).on('click','.delete', function() {
     $(this).parents(".box").remove();
   })
